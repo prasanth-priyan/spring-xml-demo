@@ -29,4 +29,7 @@
     <bean id="movie2" class="com.stackroute.Movie">
         <constructor-arg name="actor" ref="actor2"></constructor-arg>
     </bean>
+    <bean id="lifecycledemo" class="com.stackroute.demo.BeanLifecycleDemoBean"
+          init-method="customInit" destroy-method="customDestroy">
+    </bean>
 </beans>

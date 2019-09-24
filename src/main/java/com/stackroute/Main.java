@@ -1,6 +1,8 @@
 package com.stackroute;
 
+import com.stackroute.demo.BeanLifecycleDemoBean;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -9,15 +11,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Main
 {
-    public static void main( String[] args )
-    {
-        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-        Movie baahubali1 = context.getBean("movie1", Movie.class);
-        baahubali1.starring();
-
-        Movie baahubali2 = context.getBean("movie2", Movie.class);
-        baahubali2.starring();
-
-        System.out.println(baahubali1==baahubali2);
+    public static void main( String[] args ) throws Exception {
+        AbstractApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        BeanLifecycleDemoBean demoBean = context.getBean("lifecycledemo", BeanLifecycleDemoBean.class);
+        System.out.println("LifeCycle Demo");
+        context.close();
     }
 }
