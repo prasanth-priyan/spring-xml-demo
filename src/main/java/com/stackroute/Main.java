@@ -1,7 +1,6 @@
 package com.stackroute;
 
 import com.stackroute.demo.BeanLifecycleDemoBean;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
