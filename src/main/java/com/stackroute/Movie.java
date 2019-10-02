@@ -11,7 +11,7 @@ public class Movie {
         this.actor = actor;
     }
 
-    public void starring(){
+    public void printActor(){
         System.out.println(this.actor);
     }
 }
