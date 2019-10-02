@@ -19,7 +19,7 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
         this.actor = actor;
     }
 
-    public void starring(){
+    public void printActor(){
         System.out.println(this.actor);
     }
 
